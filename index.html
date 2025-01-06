@@ -16,9 +16,17 @@
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
     <meta name="google-site-verification" content="rGYj_ErbmF38jaSnkfPkZe_rZOw4rS_e_gk2A3YbXYc" />
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Inline CSS -->
     <style>
         body {
-            padding-top: 60px; 
+            margin: 0;
+            padding-top: 70px; /* Adjust this to match the height of your navbar */
+        }
+        .navbar {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better visibility */
         }
     </style>
 
@@ -68,45 +76,68 @@
 
     <!-- Menu 2-->
     <!-- MENU -->
-<nav class="navbar navbar-expand-sm navbar-light fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Home</a>
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Home</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
 
-            <ul class="navbar-nav ml-lg-auto">
-                <div class="ml-lg-4">
-                    <div class="color-mode d-lg-flex justify-content-center align-items-center">
-                        <i class="color-mode-icon"></i>
-                        Color mode
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                        <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                            <i class="color-mode-icon"></i>
+                            Color mode
+                        </div>
                     </div>
-                </div>
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
+    <!-- Content Sections -->
+    <div id="about" class="container mt-5">
+        <h1>About</h1>
+        <p>This is the about section.</p>
+    </div>
+
+    <div id="project" class="container mt-5">
+        <h1>Projects</h1>
+        <p>This is the projects section.</p>
+    </div>
+
+    <div id="resume" class="container mt-5">
+        <h1>Resume</h1>
+        <p>This is the resume section.</p>
+    </div>
+
+    <div id="contact" class="container mt-5">
+        <h1>Contact</h1>
+        <p>This is the contact section.</p>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     
