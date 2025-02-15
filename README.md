@@ -17,10 +17,10 @@ Data Visualization: Tableau, Looker Studio, Matplotlib, Seaborn, Power BI.
 🌟 Professional Highlights.
 
 
-
+Senior Software Engineer: At Capgemini Pvt LTD with expertise in Java Full Stack Development.
 Customer Service Associate at Leon's Furniture: Contributed to the team that secured first place nationwide.
 Computer Tutor: Mentored students in computer fundamentals and programming.
-Senior Software Engineer: At Capgemini Pvt LTD with expertise in Java Full Stack Development.
+
 
 
 
