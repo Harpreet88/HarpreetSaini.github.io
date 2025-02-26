@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume - Side by Side Timeline</title>
+    <style>
+       
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .resume-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .section h1 {
+            text-align: center;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--text-color);
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        ul li::before {
+            content: '➤';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 768px) {
+            .resume-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Education Section -->
+        <div class="section">
+            <h1>Education</h1>
+            <div class="content">
+                <img src="https://via.placeholder.com/50" alt="University of Calgary Logo" class="logo">
+                <h2>Sep 2024 - Present</h2>
+                <p><strong>Master of Data Science and Analytics</strong></p>
+                <p>University of Calgary – GPA (3.77/ 4.0), Canada</p>
+            </div>
+            <div class="content">
+                <img src="https://via.placeholder.com/50" alt="Chandigarh University Logo" class="logo">
+                <h2>Aug 2015 - Jun 2019</h2>
+                <p><strong>Bachelor of Engineering</strong></p>
+                <p>Chandigarh University, India</p>
+            </div>
+        </div>
+        <!-- Work Experience Section -->
+        <div class="section">
+            <h1>Work Experience</h1>
+            <div class="content">
+                <img src="https://via.placeholder.com/50" alt="Leons Furniture Logo" class="logo">
+                <h2>Nov 2023 - Aug 2024</h2>
+                <p><strong>Customer Service Associate</strong></p>
+                <p>Leons Furniture, Edmonton, Canada</p>
+                <ul>
+                    <li>Assisted the company in securing the top position in Canada through trend analysis, driving a 45% increase in service performance.</li>
+                    <li>Resolved complex customer issues efficiently, maintaining a 95% success rate, and significantly enhancing customer retention.</li>
+                    <li>Maintained high precision in customer data, achieving an 89% accuracy rate in profiles, improving personalized service.</li>
+                </ul>
+            </div>
+            <div class="content">
+                <img src="https://via.placeholder.com/50" alt="Public School Logo" class="logo">
+                <h2>Jul 2022 - Jun 2023</h2>
+                <p><strong>Computer Tutor</strong></p>
+                <p>Public School, Punjab, India</p>
+                <ul>
+                    <li>Taught computer literacy to 8th-12th grade students, enhancing digital skills and preparing students for future technological demands.</li>
+                    <li>Managed and analyzed student performance data using Excel, improving communication, & reporting for teachers, students, and parents.</li>
+                </ul>
+            </div>
+            <div class="content">
+                <img src="https://via.placeholder.com/50" alt="Capgemini Logo" class="logo">
+                <h2>Aug 2019 - Feb 2022</h2>
+                <p><strong>Sr. Software Engineer</strong></p>
+                <p>Capgemini PVT LTD, Pune, India</p>
+                <ul>
+                    <li>Optimized Subway Payment system, reducing processing errors by 20%, and improving overall transaction accuracy and efficiency.</li>
+                    <li>Boosted application reliability and user satisfaction by 25% via thorough manual testing, identifying and fixing critical issues.</li>
+                    <li>Created a Mobile Billing Portal using Java 8, Spring Boot, and RESTful APIs, improving billing processes and customer accessibility.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
