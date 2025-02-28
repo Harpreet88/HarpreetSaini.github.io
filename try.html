@@ -115,11 +115,21 @@
 </head>
 <body>
     <div class="container">
-        <div class="tabs">
-            <button class="tab active" onclick="filterProjects('all')">All Projects</button>
-            <button class="tab" onclick="filterProjects('python')">Python Projects</button>
-            <button class="tab" onclick="filterProjects('r')">R Projects</button>
-            <button class="tab" onclick="filterProjects('visual')">Visualized Projects</button>
+        <div style="display: flex; justify-content: center;">
+            <div class="tabs">
+                <button class="tab active" onclick="filterProjects('all')" style="padding: 12px 24px; font-size: 16px; font-weight: bold; color: #333; background-color: #f0f0f0; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.3s ease;">
+                    <strong>All</strong>
+                </button>
+                <button class="tab" onclick="filterProjects('python')" style="padding: 12px 24px; font-size: 16px; font-weight: bold; color: #333; background-color: #f0f0f0; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.3s ease;">
+                    <strong>Python</strong>
+                </button>
+                <button class="tab" onclick="filterProjects('r')" style="padding: 12px 24px; font-size: 16px; font-weight: bold; color: #333; background-color: #f0f0f0; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.3s ease;">
+                    <strong>R</strong>
+                </button>
+                <button class="tab" onclick="filterProjects('visual')" style="padding: 12px 24px; font-size: 16px; font-weight: bold; color: #333; background-color: #f0f0f0; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.3s ease;">
+                    <strong>Power BI/Tableau</strong>
+                </button>
+            </div>
         </div>
 
 
@@ -128,11 +138,17 @@
         <div class="projects-grid">
             <!-- Python Projects -->
             <div class="project-card" data-category="python">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/yourusername/olympics-dominance" target="_blank" style="text-decoration: none; color: #007BFF;">
+                            Olympic-Medal-Dominance
+                        </a>
+                    </h3>
+                </div>
                 <img src="images/project/olympics2.jpg" alt="Python Project" class="project-image">
                 <div class="project-details">
                     <div style="position: relative; display: flex; flex-direction: column;">
                         <div style="position: absolute; top: 0; right: 0;">
-                            <img src="your-image-url.jpg" alt="Olympics Dominance Project" style="max-width: 150px; height: auto; border-radius: 10px;">
                         </div>
                         <div>
                             <p><strong>Olympics Dominance - Top 10 Medalists Analysis</strong></p>
@@ -152,12 +168,18 @@
                 </div>
             </div>
             <div class="project-card" data-category="python">
-                <img src="images/project/LOGO.jpeg" alt="Python Project" class="project-image">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/Harpreet88/Otaku-Insights" target="_blank" style="text-decoration: none; color: #007BFF;">
+                            Otaku Insights
+                        </a>
+                    </h3>
+                </div>
+                <img src="images/project/LOGO.jpg" alt="Python Project" class="project-image">
                 <div class="project-details">
                     
                     <div style="position: relative; display: flex; flex-direction: column;">
                         <div style="position: absolute; top: 0; right: 0;">
-                            <img src="your-image-url.jpg" alt="Otaku Insights Project" style="max-width: 150px; height: auto; border-radius: 10px;">
                         </div>
                         <div>
                             <p><strong>Otaku Insights - Anime Data Analysis & Prediction</strong></p>
@@ -180,11 +202,17 @@
             </div>
 
             <div class="project-card" data-category="python">
-                <img src="python-project3.jpg" alt="Python Project" class="project-image">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/yourusername/adult-census-imputation" target="_blank" style="text-decoration: none; color: #007BFF;">
+                            Adult Census
+                        </a>
+                    </h3>
+                </div>
+                <img src="images/project/AdultCensus.png" alt="Python Project" class="project-image">
                 <div class="project-details">
                     <div style="position: relative; display: flex; flex-direction: column;">
                         <div style="position: absolute; top: 0; right: 0;">
-                            <img src="your-image-url.jpg" alt="Adult Census Project" style="max-width: 150px; height: auto; border-radius: 10px;">
                         </div>
                         <div>
                             <p><strong>Adult Census - Imputation Techniques for Missing Data</strong></p>
@@ -205,11 +233,17 @@
             </div>
 
             <div class="project-card" data-category="python">
-                <img src="python-project4.jpg" alt="Python Project" class="project-image">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/Harpreet88/TwitNLP-Topic-Modeling-Twitter-Data" target="_blank" style="text-decoration: none; color: #007BFF;">
+                            Twitter Conversation Analysis with LDA
+                        </a>
+                    </h3>
+                </div>
+                <img src="images/project/twitter.jpeg" alt="Python Project" class="project-image">
                 <div class="project-details">
                     <div style="position: relative; display: flex; flex-direction: column;">
                         <div style="position: absolute; top: 0; right: 0;">
-                            <img src="your-image-url.jpg" alt="Twitter Conversation Analysis Project" style="max-width: 150px; height: auto; border-radius: 10px;">
                         </div>
                         <div>
                             <p><strong>Twitter Conversation Analysis with LDA - Uncovering Hidden Topics and Trends</strong></p>
@@ -232,11 +266,17 @@
 
             <!-- R Projects -->
             <div class="project-card" data-category="r">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/Harpreet88/Fire-Spread-Impact-Analysis" target="_blank" style="text-decoration: none; color: #007BFF;">
+                            Wildfire Spread Impact Analysis
+                        </a>
+                    </h3>
+                </div>
                 <img src="images/project/Forestfire.jpg" alt="Fire Spread Impact Analysis" class="project-image">
                 <div class="project-details">
                     <div style="position: relative; display: flex; flex-direction: column;">
                         <div style="position: absolute; top: 0; right: 0;">
-                            <img src="your-image-url.jpg" alt="Wildfire Spread Impact Analysis" style="max-width: 150px; height: auto; border-radius: 10px;">
                         </div>
                         <div>
                             <p><strong>Wildfire Spread Impact Analysis - Temperature and Wind Speed</strong></p>
@@ -256,11 +296,17 @@
                 </div>
             </div>
             <div class="project-card" data-category="r">
-                <img src="images/project/weight.jpg" alt="Health Matrix" class="project-image">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/Harpreet88/Health-Matrix" target="_blank" style="text-decoration: none; color: #007BFF;">
+                            Health Matrix
+                        </a>
+                    </h3>
+                </div>
+                <img src="images/project/weight.jpeg" alt="Health Matrix" class="project-image">
                 <div class="project-details">
                     <div style="position: relative; display: flex; flex-direction: column;">
                         <div style="position: absolute; top: 0; right: 0;">
-                            <img src="your-image-url.jpg" alt="Health Matrix Project" style="max-width: 150px; height: auto; border-radius: 10px;">
                         </div>
                         <div>
                             <p><strong>Health Matrix - Impact of Healthcare Access on Disease Outcomes</strong></p>
@@ -282,7 +328,14 @@
 
             <!-- Visualized Projects -->
             <div class="project-card" data-category="visual">
-                <img src="images/project/apartment.jpg" alt="Sales" class="project-image">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/Harpreet88/Apartment-Rent-Classifier" target="_blank" style="text-decoration: none; color: #007BFF;">
+                            Apartment Rent Classifier
+                        </a>
+                    </h3>
+                </div>
+                <img src="images/project/Rentals_LP_Illustration3.png" alt="Sales" class="project-image">
                 <div class="project-details">
                     <div>
                         <p><strong>Apartment Rent Classifier</strong></p>
@@ -297,28 +350,49 @@
                 </div>
             </div>
             <div class="project-card" data-category="visual">
-                <img src="images/project/bike.jpeg"" alt="Adventure Sales" class="project-image"> 
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/Harpreet88/AdventureWorks-Sales" target="_blank" style="text-decoration: none; color: #007BFF;">
+                         Adventure Sales   
+                        </a>
+                    </h3>
+                </div>
+                <img src="images/project/bike.jpeg" alt="Adventure Sales" class="project-image"> 
                 <div class="project-details">
                     <p><strong>Operational and Strategic Dashboards</strong></p>
                     <p>📌 <strong>Brief Description:</strong> Operational and Strategic Dashboards of a company that manufactures and sells bikes and related accessories/clothing. These dashboards provide insights into the company's sales, performance, and strategy to optimize business decisions.</p>
+                    <ul>
+                        <li><b>Power BI:</b> Creating dashboards for analysis and visualizations.</li>
+                    
+                    </ul>
                     <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/Harpreet88/AdventureWorks-Sales" target="_blank">github.com/Harpreet88/AdventureWorks-Sales</a></p>
                 </div>
             </div>
             <div class="project-card" data-category="visual">
-                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pivotalsolutions.com%2Fhow-to-attract-employees-in-a-challenging-labor-and-salaries-market%2F&psig=AOvVaw2SKricRw3jmZVcxMbPRMzT&ust=1740796484425000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLizo7-q5YsDFQAAAAAdAAAAABAE" alt="Data Science Salaries" class="project-image">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <h3>
+                        <a href="https://github.com/Harpreet88/AdventureWorks-Sales" target="_blank" style="text-decoration: none; color: #007BFF;">
+                           Data Science Salaries 
+                        </a>
+                    </h3>
+                </div>
+                <img src="images/project/salaries.jpeg" alt="Adventure Sales" class="project-image"> 
                 <div class="project-details">
-                    <p>This is a detailed description of Visual Project 3. It involves creating infographics with D3.js.</p>
-                    <a href="https://github.com/Harpreet88/Data-Science-Salaries" target="_blank">GitHub Link</a>
+                    <p><strong>Data Science Salaries</strong></p>
+                    <p>📌 <strong>Brief Description:</strong>This project explores data science salaries, examining factors like job title,
+                         experience level, and location to uncover key trends in the industry.</p>
+                         <ul>
+                            <li><b>Tableau:</b> Creating dashboards for analysis and visualizations.</li>
+                        
+                        </ul>
+                         <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/Harpreet88/AdventureWorks-Sales" target="_blank">github.com/Harpreet88/AdventureWorks-Sales</a></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <iframe src="try2.html" 
-    width="100%" 
-    height="1200px" 
-    style="border: none;">
-</iframe>
+   
+
 
     <script>
         function filterProjects(category) {
