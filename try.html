@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #eee;
+        }
+
+        .tab {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1.1rem;
+            color: #666;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tab.active {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #3498db;
+        }
+
+        .tab:hover {
+            color: #3498db;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-details {
+            display: none;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-details {
+            display: block;
+        }
+
+        .project-card:hover ~ .project-card {
+            opacity: 0.3;
+        }
+
+        .project-details p {
+            margin: 0.5rem 0;
+            color: #333;
+        }
+
+        .project-details a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-details a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="filterProjects('all')">All Projects</button>
+            <button class="tab" onclick="filterProjects('python')">Python Projects</button>
+            <button class="tab" onclick="filterProjects('r')">R Projects</button>
+            <button class="tab" onclick="filterProjects('visual')">Visualized Projects</button>
+        </div>
+
+
+
+
+        <div class="projects-grid">
+            <!-- Python Projects -->
+            <div class="project-card" data-category="python">
+                <img src="images/project/olympics2.jpg" alt="Python Project" class="project-image">
+                <div class="project-details">
+                    <div style="position: relative; display: flex; flex-direction: column;">
+                        <div style="position: absolute; top: 0; right: 0;">
+                            <img src="your-image-url.jpg" alt="Olympics Dominance Project" style="max-width: 150px; height: auto; border-radius: 10px;">
+                        </div>
+                        <div>
+                            <p><strong>Olympics Dominance - Top 10 Medalists Analysis</strong></p>
+                            <p>📌 <strong>Brief Description:</strong> An exploration of Olympic history, analyzing the top 10 countries by medal counts in both Summer and Winter Olympics. The project uncovers trends in Olympic performance and investigates factors contributing to dominance in the Games.</p>
+                            <p>🔧 <strong>Technologies Used:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn), Jupyter Notebook</p>
+                            <p>📊 <strong>Key Highlights:</strong></p>
+                            <ul>
+                                <li>Analyzed Olympic medal data from the past 10 editions of the Summer and Winter Games.</li>
+                                <li>Visualized top-performing countries with a focus on their gold, silver, and bronze medal counts.</li>
+                                <li>Created comparative charts to show trends in country performance over time.</li>
+                                <li>Explored factors influencing dominance, such as population size, sports funding, and historical factors.</li>
+                            </ul>
+                            <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/yourusername/olympics-dominance" target="_blank">github.com/yourusername/olympics-dominance</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="project-card" data-category="python">
+                <img src="images/project/LOGO.jpeg" alt="Python Project" class="project-image">
+                <div class="project-details">
+                    
+                    <div style="position: relative; display: flex; flex-direction: column;">
+                        <div style="position: absolute; top: 0; right: 0;">
+                            <img src="your-image-url.jpg" alt="Otaku Insights Project" style="max-width: 150px; height: auto; border-radius: 10px;">
+                        </div>
+                        <div>
+                            <p><strong>Otaku Insights - Anime Data Analysis & Prediction</strong></p>
+                            <p>📌 <strong>Brief Description:</strong> A deep dive into anime data, exploring genre trends, popularity factors, and predicting anime rankings using machine learning. The project also uncovers hidden gems—high-quality but underrated anime.</p>
+                            <p>🔧 <strong>Technologies Used:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn), Power BI, MyAnimeList API</p>
+                            <p>📊 <strong>Key Highlights:</strong></p>
+                            <ul>
+                                <li>Collected and cleaned anime data from MyAnimeList API (2,795 records).</li>
+                                <li>Applied <strong>LDA Topic Modeling</strong> on anime synopses to extract key themes.</li>
+                                <li>Built <strong>ML models (Regression, Random Forest)</strong> to predict anime rankings.</li>
+                                <li>Identified <strong>hidden gem anime</strong>—highly rated but low popularity.</li>
+                                <li>Created <strong>interactive Power BI dashboards</strong> for anime insights.</li>
+                            </ul>
+                            <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/Harpreet88/Otaku-Insights" target="_blank">github.com/Harpreet88/Otaku-Insights</a></p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="project-card" data-category="python">
+                <img src="python-project3.jpg" alt="Python Project" class="project-image">
+                <div class="project-details">
+                    <div style="position: relative; display: flex; flex-direction: column;">
+                        <div style="position: absolute; top: 0; right: 0;">
+                            <img src="your-image-url.jpg" alt="Adult Census Project" style="max-width: 150px; height: auto; border-radius: 10px;">
+                        </div>
+                        <div>
+                            <p><strong>Adult Census - Imputation Techniques for Missing Data</strong></p>
+                            <p>📌 <strong>Brief Description:</strong> This project focuses on evaluating different imputation techniques to handle missing data in the Adult Census dataset. The goal is to assess the impact of these imputation methods on data quality and predictive modeling performance.</p>
+                            <p>🔧 <strong>Technologies Used:</strong> Python (Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib), Jupyter Notebook, Regression, KNN, Iterative Imputation</p>
+                            <p>📊 <strong>Key Highlights:</strong></p>
+                            <ul>
+                                <li>Created missing values in the dataset to simulate real-world scenarios for imputation.</li>
+                                <li>Evaluated imputation techniques including <strong>Regression Imputation</strong>, <strong>KNN Imputation</strong>, and <strong>Iterative Imputation</strong>.</li>
+                                <li>Compared imputation results by evaluating their impact on model performance using RMSE for numerical variables and accuracy for categorical variables.</li>
+                                <li>Trained Random Forest classifiers on imputed datasets and compared predictive performance with non-imputed data.</li>
+                            </ul>
+                            <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/yourusername/adult-census-imputation" target="_blank">github.com/yourusername/adult-census-imputation</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="project-card" data-category="python">
+                <img src="python-project4.jpg" alt="Python Project" class="project-image">
+                <div class="project-details">
+                    <div style="position: relative; display: flex; flex-direction: column;">
+                        <div style="position: absolute; top: 0; right: 0;">
+                            <img src="your-image-url.jpg" alt="Twitter Conversation Analysis Project" style="max-width: 150px; height: auto; border-radius: 10px;">
+                        </div>
+                        <div>
+                            <p><strong>Twitter Conversation Analysis with LDA - Uncovering Hidden Topics and Trends</strong></p>
+                            <p>📌 <strong>Brief Description:</strong> Analyzing Twitter conversations using LDA to uncover hidden topics, trends, and insights with interactive visualizations.</p>
+                            <p>🔧 <strong>Technologies Used:</strong></p>
+                            <ul>
+                                <li><b>Programming & Libraries:</b> Python (Gensim, Pandas, NumPy, Scikit-learn)</li>
+                                <li><b>NLP & Text Processing:</b> NLTK, SpaCy, Regular Expressions</li>
+                                <li><b>Topic Modeling:</b> Latent Dirichlet Allocation (LDA) with Gensim</li>
+                                <li><b>Visualization:</b> pyLDAvis, Matplotlib, Seaborn</li>
+                                <li><b>Data Handling:</b> Jupyter Notebook, CSV/JSON for dataset storage</li>
+                                <li><b>Version Control:</b> Git, GitHub</li>
+                            </ul>
+                            <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/Harpreet88/TwitNLP-Topic-Modeling-Twitter-Data" target="_blank">github.com/Harpreet88/TwitNLP-Topic-Modeling-Twitter-Data</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- R Projects -->
+            <div class="project-card" data-category="r">
+                <img src="images/project/Forestfire.jpg" alt="Fire Spread Impact Analysis" class="project-image">
+                <div class="project-details">
+                    <div style="position: relative; display: flex; flex-direction: column;">
+                        <div style="position: absolute; top: 0; right: 0;">
+                            <img src="your-image-url.jpg" alt="Wildfire Spread Impact Analysis" style="max-width: 150px; height: auto; border-radius: 10px;">
+                        </div>
+                        <div>
+                            <p><strong>Wildfire Spread Impact Analysis - Temperature and Wind Speed</strong></p>
+                            <p>📌 <strong>Brief Description:</strong> Analyzing the impact of temperature and wind speed on wildfire spread using predictive modeling. The project explores the correlation between temperature, wind speed, and fire spread and visualizes fire spread patterns under varying environmental conditions.</p>
+                            <p>🔧 <strong>Technologies Used:</strong> R Studio, Linear Regression</p>
+                            <p>📊 <strong>Key Highlights:</strong></p>
+                            <ul>
+                                <li>Analyzed the correlation between temperature, wind speed, and wildfire spread.</li>
+                                <li>Built predictive models to understand and forecast fire behavior.</li>
+                                <li>Visualized fire spread patterns under different environmental conditions.</li>
+                                <li>Identified critical thresholds of temperature and wind speed affecting fire spread.</li>
+                            </ul>
+                            <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/Harpreet88/Fire-Spread-Impact-Analysis" target="_blank">github.com/Harpreet88/Fire-Spread-Impact-Analysis</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="project-card" data-category="r">
+                <img src="images/project/weight.jpg" alt="Health Matrix" class="project-image">
+                <div class="project-details">
+                    <div style="position: relative; display: flex; flex-direction: column;">
+                        <div style="position: absolute; top: 0; right: 0;">
+                            <img src="your-image-url.jpg" alt="Health Matrix Project" style="max-width: 150px; height: auto; border-radius: 10px;">
+                        </div>
+                        <div>
+                            <p><strong>Health Matrix - Impact of Healthcare Access on Disease Outcomes</strong></p>
+                            <p>📌 <strong>Brief Description:</strong> Analyzing the impact of healthcare access on disease outcomes using global health statistics. The project explores how various factors influence weight change, leveraging logistic regression for predictive modeling.</p>
+                            <p>🔧 <strong>Technologies Used:</strong> R Studio, Logistic Regression</p>
+                            <p>📊 <strong>Key Highlights:</strong></p>
+                            <ul>
+                                <li>Explored the correlation between healthcare access and disease outcomes.</li>
+                                <li>Analyzed the impact of lifestyle factors on weight change using multilinear regression.</li>
+                                <li>Used logistic regression for modeling and predicting health outcomes based on various influencing factors.</li>
+                                <li>Visualized data to identify key health trends and critical influencing factors.</li>
+                            </ul>
+                            <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/Harpreet88/Health-Matrix" target="_blank">github.com/Harpreet88/Health-Matrix</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Visualized Projects -->
+            <div class="project-card" data-category="visual">
+                <img src="images/project/apartment.jpg" alt="Sales" class="project-image">
+                <div class="project-details">
+                    <div>
+                        <p><strong>Apartment Rent Classifier</strong></p>
+                        <p>📌 <strong>Brief Description:</strong> This project analyzes apartment rental data to explore rental prices based on various features like location, apartment size, amenities, and more. The project focuses on visualizing trends in rental prices using Power BI. The main goal of this project is to explore apartment rents and uncover trends in rental prices based on various influencing factors.</p>
+                        <p>🔧 <strong>Technologies Used:</strong></p>
+                        <ul>
+                            <li><b>Power BI:</b> Creating dashboards for analysis and visualizations.</li>
+                            <li><b>Python:</b> Data preprocessing and feature engineering (Pandas, NumPy).</li>
+                        </ul>
+                        <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/Harpreet88/Apartment-Rent-Classifier" target="_blank">github.com/Harpreet88/Apartment-Rent-Classifier</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="visual">
+                <img src="images/project/bike.jpeg"" alt="Adventure Sales" class="project-image"> 
+                <div class="project-details">
+                    <p><strong>Operational and Strategic Dashboards</strong></p>
+                    <p>📌 <strong>Brief Description:</strong> Operational and Strategic Dashboards of a company that manufactures and sells bikes and related accessories/clothing. These dashboards provide insights into the company's sales, performance, and strategy to optimize business decisions.</p>
+                    <p>🔗 <strong>GitHub Repository:</strong> <a href="https://github.com/Harpreet88/AdventureWorks-Sales" target="_blank">github.com/Harpreet88/AdventureWorks-Sales</a></p>
+                </div>
+            </div>
+            <div class="project-card" data-category="visual">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pivotalsolutions.com%2Fhow-to-attract-employees-in-a-challenging-labor-and-salaries-market%2F&psig=AOvVaw2SKricRw3jmZVcxMbPRMzT&ust=1740796484425000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLizo7-q5YsDFQAAAAAdAAAAABAE" alt="Data Science Salaries" class="project-image">
+                <div class="project-details">
+                    <p>This is a detailed description of Visual Project 3. It involves creating infographics with D3.js.</p>
+                    <a href="https://github.com/Harpreet88/Data-Science-Salaries" target="_blank">GitHub Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe src="try2.html" 
+    width="100%" 
+    height="1200px" 
+    style="border: none;">
+</iframe>
+
+    <script>
+        function filterProjects(category) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+
+            // Get all project cards
+            const projects = document.querySelectorAll('.project-card');
+            
+            projects.forEach(project => {
+                if (category === 'all') {
+                    project.style.display = 'block';
+                } else {
+                    if (project.dataset.category === category) {
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
